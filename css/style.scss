@@ -1,0 +1,35 @@
+/*
+Theme Name: Esdaw theme
+Theme URI: theme do github
+Version: 1.0.0
+Author: Patryk Białek
+Author URI: https://github.com/PatrickBialek
+Description: A simple theme for esdaw company
+*/
+
+@import "base/1-reset";
+@import "base/2-global";
+@import "base/3-mixins";
+@import "base/4-variables";
+@import "base/5-topography";
+
+@import "modules/0-layout/1-btn";
+@import "modules/0-layout/2-heading-section";
+@import "modules/0-layout/3-tools";
+
+@import "modules/1-header/1-header";
+
+@import "modules/2-front-page/1-heading";
+@import "modules/2-front-page/2-latest";
+@import "modules/2-front-page/3-visit-gallery";
+@import "modules/2-front-page/4-opinions";
+
+@import "modules/3-gallery-page/1-gallery";
+
+@import "modules/4-about-us/1-basic-info";
+@import "modules/4-about-us/2-services";
+
+@import "modules/5-contact/1-google-map";
+@import "modules/5-contact/2-contact";
+
+@import "modules/6-footer/1-footer";

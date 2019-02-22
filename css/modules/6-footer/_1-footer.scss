@@ -1,0 +1,21 @@
+.footer {
+	background-color: $dark-grey;
+	width: 100%;
+	box-sizing: border-box;
+	color: white;
+	padding: 2rem 0rem;
+	font-family: "Poppins", sans-serif;
+	&,
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+	&__content {
+		justify-content: center;
+		text-align: center;
+		& span {
+			opacity: 0.75;
+			line-height: 1.6;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+.contact {
+	padding: 8rem 0rem;
+	justify-content: center;
+	&,
+	&__content,
+	&__form-row,
+	&__textarea {
+		width: 100%;
+	}
+	&,
+	&__content,
+	&__contact-data,
+	&__form-box,
+	&__form-row {
+		display: flex;
+	}
+	&__content {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	&__info-box {
+		width: 33.333%;
+		padding: 1rem;
+		box-sizing: border-box;
+
+		& .heading-secondary {
+			margin-bottom: 2rem;
+		}
+	}
+	&__contact-data {
+		margin-top: 2rem;
+		flex-direction: column;
+		& p,
+		& span {
+			color: $grey;
+			font-size: 1.6rem;
+			line-height: 2.6rem;
+		}
+	}
+	&__form-box {
+		width: 66.666%;
+		padding: 1rem;
+		box-sizing: border-box;
+		flex-direction: column;
+	}
+	&__form-row {
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+	}
+	&__text {
+		color: $black;
+		padding: 14px 18px;
+		font-size: 1.6rem;
+		border: 1px solid #e1e1e1;
+		border-radius: 0;
+		outline: 0;
+		-webkit-appearance: none;
+		cursor: pointer;
+		box-sizing: border-box;
+		&::placeholder {
+			font-size: 1.6rem;
+			opacity: 0.7;
+		}
+		&--50 {
+			width: 49%;
+		}
+		&--100 {
+			width: 100%;
+		}
+	}
+	&__textarea {
+		color: $black;
+		padding: 14px 18px;
+		font-size: 1.6rem;
+		resize: none;
+		height: 150px;
+		outline: none;
+		border: 1px solid #e1e1e1;
+		&::placeholder {
+			font-size: 1.6rem;
+			opacity: 0.7;
+		}
+	}
+	&__send {
+		border: solid 1px $black;
+		border-radius: 2px;
+		padding: 1.2rem 2.4rem;
+		color: $black;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 2rem;
+		transition: background-color 0.35s, border-color 0.35s, color 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+		&:hover {
+			color: $white;
+			background-color: $black;
+			cursor: pointer;
+		}
+	}
+}

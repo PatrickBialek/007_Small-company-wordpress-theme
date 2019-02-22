@@ -1,0 +1,21 @@
+.basic-info {
+	padding: 6rem;
+	&,
+	&__content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	&__content {
+		width: 100%;
+		max-width: 1100px;
+		margin: 0 auto;
+		& h2 {
+			margin-bottom: 2rem;
+		}
+		& p {
+			margin-bottom: 1.6rem;
+		}
+	}
+}
