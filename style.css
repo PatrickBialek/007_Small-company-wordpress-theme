@@ -165,12 +165,6 @@ body {
   @media (min-width: 1200px) {
     @mixin-content; } }
 
-@define-mixin clearfix {
-  ::after {
-    content: "";
-    clear: both;
-    display: table; } }
-
 h1,
 h2,
 h3 {
