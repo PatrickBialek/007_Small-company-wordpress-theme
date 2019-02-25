@@ -4,11 +4,14 @@
 	"description": "Simple wordpress theme for esdaw company ",
 	"main": "index.js",
 	"scripts": {
-		"watchsass": "node-sass css/style.scss style.css -w"
+		"compile:sass": "node-sass css/style.scss style.css -w",
+		"compile:js": "webpack"
 	},
 	"author": "Patryk Białek",
 	"license": "ISC",
 	"devDependencies": {
-		"node-sass": "^4.11.0"
+		"node-sass": "^4.11.0",
+		"webpack": "^4.29.5",
+		"webpack-cli": "^3.2.3"
 	}
 }
