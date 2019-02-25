@@ -1,5 +1,6 @@
 const navElements = Array.from(document.querySelectorAll('.header__nav ul li a')),
-	hamburgerIcon = document.querySelector('#hamburger-icon');
+	hamburgerIcon = document.querySelector('#hamburger-icon'),
+	header = document.querySelector('#main-header');
 
 function markCurrentLink() {
 	const currentHref = document.URL;
@@ -16,10 +17,10 @@ function markCurrentLink() {
 }
 
 function mobileMenuHandler() {
-	if (hamburgerIcon.classList.contains("active")) {
-		hamburgerIcon.classList.remove("active");
+	if (header.classList.contains("active")) {
+		header.classList.remove("active");
 	} else {
-		hamburgerIcon.classList.add("active");
+		header.classList.add("active");
 	}
 }
 

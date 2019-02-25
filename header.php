@@ -9,7 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-<header class="header">
+<header class="header" id="main-header">
 <?php
 
 include get_template_directory() . '/template-parts/1-header/_1-header-nav.php';

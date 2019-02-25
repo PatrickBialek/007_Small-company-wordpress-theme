@@ -1,5 +1,22 @@
 .header {
 
+	&.active span:nth-last-child(1) {
+		transform: rotate(-45deg) translate(-2px, -1px);
+	}
+
+	&.active span:nth-last-child(2) {
+		opacity: 0;
+	}
+
+	&.active span:nth-last-child(3) {
+		transform: rotate(45deg) translate(2px, 0px);
+	}
+
+	&.active .header__nav {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
 	&,
 	&__top-bar,
 	&__logo-box,
@@ -49,17 +66,44 @@
 		padding-top: 4px;
 
 		@include atSmall {
-			display: none;
+			//display: none;
+			position: absolute;
+			z-index: 5;
+			background-color: #fff;
+			height: 100vh;
+			width: 100%;
+			top: 89px;
+			left: 0;
+			box-sizing: border-box;
+			padding: 2rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 114.5px;
+			opacity: 0;
+			transition: opacity .3s ease-in-out;
+			transition: transform .85s ease-in-out;
+			transform: translateY(-120%);
 		}
 
 		& ul {
 			height: 8.5rem;
 			box-sizing: border-box;
 
+			@include atSmall {
+				width: 100%;
+				flex-direction: column;
+				height: auto;
+			}
+
 			& li {
 				height: 100%;
 				align-items: center;
 				padding: 0rem 2rem;
+
+				@include atSmall {
+					margin: 1.5rem 0rem;
+				}
 
 				& a {
 					color: $black;
@@ -69,6 +113,10 @@
 					line-height: 2.2rem;
 					vertical-align: middle;
 					transition: all .1s ease-in-out;
+
+					@include atSmall {
+						font-size: 2.85rem;
+					}
 
 					&:after {
 						display: block;
@@ -104,11 +152,6 @@
 
 	&__hamburger-container {
 		display: none;
-
-
-		&.active & span {
-			background-color: red;
-		}
 
 		@include atSmall {
 			display: flex;
