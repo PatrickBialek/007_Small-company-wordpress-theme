@@ -1,6 +1,6 @@
 <div class="header__top-bar">
 	<div class="header__logo-box">
-		<h2>EsDaw</h2>
+		<h2>Es-Daw</h2>
 	</div>
 	<nav class="header__nav">
 	<?php wp_nav_menu( [ 

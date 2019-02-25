@@ -1,2 +1,2 @@
 import './modules/1-nav';
-import './modules/2-animations';
+import './modules/2-opinions';
