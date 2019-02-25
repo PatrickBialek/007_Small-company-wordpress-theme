@@ -19,6 +19,10 @@
 		position: fixed;
 		z-index: 20;
 		border-bottom: 1px solid $grey;
+
+		@include atSmall {
+			padding: 0 2rem;
+		}
 	}
 
 	&__logo-box,
@@ -35,9 +39,19 @@
 		font-size: 2rem;
 		font-weight: 700;
 		font-family: "Lato", sans-serif;
+
+		@include atSmall {
+			margin: 2rem 0rem;
+		}
 	}
 
 	&__nav {
+		padding-top: 4px;
+
+		@include atSmall {
+			display: none;
+		}
+
 		& ul {
 			height: 8.5rem;
 			box-sizing: border-box;
@@ -54,6 +68,28 @@
 					font-weight: 500;
 					line-height: 2.2rem;
 					vertical-align: middle;
+					transition: all .1s ease-in-out;
+
+					&:after {
+						display: block;
+						content: "";
+						width: 1%;
+						height: 2px;
+						background-color: $black;
+						z-index: 3;
+						margin-top: 1px;
+						opacity: 0;
+						transition: all .35s ease-in-out;
+					}
+
+					&:active {
+						color: $grey;
+					}
+
+					&:hover::after {
+						width: 100%;
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -64,5 +100,42 @@
 		justify-content: flex-start;
 		align-items: center;
 		padding: 0 4rem;
+	}
+
+	&__hamburger-container {
+		display: none;
+
+
+		&.active & span {
+			background-color: red;
+		}
+
+		@include atSmall {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			margin: 3.05rem 0rem;
+			cursor: pointer;
+		}
+
+		& span {
+			width: 33px;
+			height: 4px;
+			margin-bottom: 5px;
+			position: relative;
+			background-color: $black;
+			border-radius: 3px;
+			transform-origin: 4px 0px;
+			transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+				background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+				opacity 0.55s ease;
+			display: block;
+		}
+	}
+
+	&__active {
+		color: red !important;
 	}
 }

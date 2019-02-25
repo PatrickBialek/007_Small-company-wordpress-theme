@@ -3,11 +3,15 @@
 		<h2>EsDaw</h2>
 	</div>
 	<nav class="header__nav">
-		<ul>
-			<li><a href="#">Strona główna</a></li>
-			<li><a href="#">Galeria</a></li>
-			<li><a href="#">O nas</a></li>
-			<li><a href="#">Kontakt</a></li>
-		</ul>
+	<?php wp_nav_menu( [ 
+		'theme_location' => 'main-menu',
+		'container'=> false,
+		'items_wrap' => '<ul>%3$s</ul>'
+	] ); ?>
 	</nav>
+	<div class="header__hamburger-container" id="hamburger-icon">
+		<span></span>
+    <span></span>
+    <span></span>
+	</div>
 </div>

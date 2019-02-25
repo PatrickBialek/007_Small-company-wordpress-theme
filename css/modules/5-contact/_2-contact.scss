@@ -103,7 +103,9 @@
 			width: 49%;
 
 			&:first-child {
-				margin-bottom: 1.5rem;
+				@include atTiny {
+					margin-bottom: 1.5rem;
+				}
 			}
 
 			@include atTiny {
