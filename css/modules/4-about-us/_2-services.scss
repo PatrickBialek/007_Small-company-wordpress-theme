@@ -1,6 +1,10 @@
 .services {
 	padding: 0rem 0rem 7rem;
 
+	@include atSmall {
+		padding: 0rem;
+	}
+
 	&,
 	&__content {
 		display: flex;
@@ -21,6 +25,23 @@
 		margin: 3rem auto 3rem;
 		max-width: 1100px;
 		align-items: center;
+
+		@include atSmall {
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+
+		&:nth-of-type(odd) {
+			@include atSmall {
+				flex-direction: column-reverse;
+			}
+		}
+
+		&:nth-of-type(even) {
+			@include atSmall {
+				flex-direction: column;
+			}
+		}
 	}
 
 	&__box {
@@ -28,10 +49,26 @@
 		width: 50%;
 		padding: 1rem 2rem;
 		flex-direction: column;
+
+		@include atSmall {
+			width: 100%;
+			padding: 2rem;
+		}
+
 	}
 
 	&__image-box {
 		justify-content: center;
 		width: 50%;
+
+		@include atSmall {
+			width: 100%;
+			max-width: 350px;
+		}
+
+	}
+
+	&__image {
+		max-width: 100%;
 	}
 }

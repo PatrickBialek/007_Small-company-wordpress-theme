@@ -2,6 +2,10 @@
 	padding: 8rem 0rem;
 	justify-content: center;
 
+	@include atSmall {
+		padding: 2rem 0rem;
+	}
+
 	&,
 	&__content,
 	&__form-row,
@@ -20,12 +24,24 @@
 	&__content {
 		max-width: 1200px;
 		margin: 0 auto;
+
+		@include atSmall {
+			flex-direction: column;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0rem 2rem;
+		}
 	}
 
 	&__info-box {
 		width: 33.333%;
 		padding: 1rem;
 		box-sizing: border-box;
+
+		@include atSmall {
+			width: 100%;
+			text-align: center;
+		}
 
 		& .heading-secondary {
 			margin-bottom: 2rem;
@@ -49,11 +65,22 @@
 		padding: 1rem;
 		box-sizing: border-box;
 		flex-direction: column;
+
+		@include atSmall {
+			width: 100%;
+		}
 	}
 
 	&__form-row {
 		justify-content: space-between;
 		margin-bottom: 1.5rem;
+
+
+		@include atTiny {
+			display: flex;
+			flex-direction: column;
+		}
+
 	}
 
 	&__text {
@@ -74,6 +101,14 @@
 
 		&--50 {
 			width: 49%;
+
+			&:first-child {
+				margin-bottom: 1.5rem;
+			}
+
+			@include atTiny {
+				width: 100%;
+			}
 		}
 
 		&--100 {
@@ -89,6 +124,7 @@
 		height: 150px;
 		outline: none;
 		border: 1px solid #e1e1e1;
+		box-sizing: border-box;
 
 		&::placeholder {
 			font-size: 1.6rem;

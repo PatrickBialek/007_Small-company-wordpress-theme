@@ -1,10 +1,14 @@
 .visit-gallery {
-	margin-top: 3rem;
+	margin-top: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	width: 100%;
 	height: 300px;
+
+	@include atSmall {
+		margin-top: 3rem;
+	}
 
 	&,
 	&__content {
@@ -18,6 +22,7 @@
 		align-items: center;
 		padding: 0 4rem;
 		justify-content: center;
+		text-align: center;
 
 		& h2,
 		& p {

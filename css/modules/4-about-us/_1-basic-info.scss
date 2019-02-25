@@ -1,6 +1,10 @@
 .basic-info {
 	padding: 6rem;
 
+	@include atSmall {
+		padding: 4rem 2rem;
+	}
+
 	&,
 	&__content {
 		display: flex;

@@ -1,5 +1,9 @@
-.latest {
+.last {
 	padding: 6rem 0rem;
+
+	@include atSmall {
+		padding: 4rem 2rem;
+	}
 
 	&,
 	&__description {
@@ -15,6 +19,7 @@
 		max-width: 600px;
 		text-align: center;
 		margin-bottom: 4rem;
+		padding: 0 2rem;
 
 		& h2 {
 			margin-bottom: 2rem;
@@ -26,6 +31,13 @@
 		max-width: 1200px;
 		width: 100%;
 		margin: 0 auto;
+		flex-direction: row;
+		align-items: center;
+
+		@include atSmall {
+			flex-direction: column;
+			max-width: 500px;
+		}
 	}
 
 	&__single {
@@ -37,5 +49,6 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-bottom: 2rem;
 	}
 }
