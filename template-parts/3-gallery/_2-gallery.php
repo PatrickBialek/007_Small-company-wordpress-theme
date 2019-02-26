@@ -33,6 +33,6 @@
 			</div>
 		</div>
 
-		<?php endwhile; endif; ?>	
+	<?php endwhile; endif; ?>	
 
 </section>
