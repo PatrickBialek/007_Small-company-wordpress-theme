@@ -1,5 +1,6 @@
 .opinions {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 2rem;
@@ -33,6 +34,7 @@
 		color: $grey;
 		line-height: 1.6;
 		font-weight: 300;
+		font-style: italic;
 	}
 
 	& h4 {

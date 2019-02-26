@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"compile:sass": "node-sass css/style.scss style.css -w",
-		"compile:js": "webpack"
+		"compile:js": "webpack --mode development"
 	},
 	"author": "Patryk Białek",
 	"license": "ISC",
@@ -15,6 +15,6 @@
 		"webpack-cli": "^3.2.3"
 	},
 	"dependencies": {
-		"flickity": "^2.1.2"
+		"flickity": "^2.2.0"
 	}
 }

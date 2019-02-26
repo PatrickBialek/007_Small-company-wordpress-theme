@@ -1,6 +1,6 @@
 <section class="services">
 	<div class="services__content">
-		<h2 class="heading-secondary margin-bottom-huge">Czym się zajmujemy?</h2>
+		<h2 class="heading-secondary margin-bottom-huge text-center">Czym się zajmujemy?</h2>
 
 		<?php if( have_rows('about_us_section') ): 
 

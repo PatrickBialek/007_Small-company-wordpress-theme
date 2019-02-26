@@ -5,6 +5,7 @@ if( have_rows('opinions_section') ):
 	while( have_rows('opinions_section') ): the_row(); ?>
 
 	<section class="opinions" id="opinions-container">
+		<div class="carousel js-flickity" id="carousel-container">
 
 		<?php
 
@@ -17,7 +18,7 @@ if( have_rows('opinions_section') ):
 			
 			?>
 
-			<div class="opinions__single">
+			<div class="carousel__cell">
 				<span class="opinions__quotension-mark">"</span>
 				<p class="opinions__quote"><?php echo $opnion ?></p>
 				<h4 class="opinions__author"><?php echo $author ?><h4>
@@ -25,6 +26,7 @@ if( have_rows('opinions_section') ):
 
 		<?php endwhile; endif; ?>	
 
+		</div>
 	</section>
 
 <?php endwhile; endif; ?>	
