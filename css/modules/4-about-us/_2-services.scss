@@ -6,7 +6,7 @@
 	}
 
 	&,
-	&__content {
+	&__single {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -32,12 +32,16 @@
 		}
 
 		&:nth-of-type(odd) {
+			flex-direction: row;
+
 			@include atSmall {
 				flex-direction: column-reverse;
 			}
 		}
 
 		&:nth-of-type(even) {
+			flex-direction: row-reverse;
+
 			@include atSmall {
 				flex-direction: column;
 			}
@@ -54,7 +58,6 @@
 			width: 100%;
 			padding: 2rem;
 		}
-
 	}
 
 	&__image-box {
@@ -65,7 +68,6 @@
 			width: 100%;
 			max-width: 350px;
 		}
-
 	}
 
 	&__image {

@@ -558,7 +558,7 @@ h3 {
   @media (max-width: 900px) {
     .services {
       padding: 0rem; } }
-  .services, .services__content {
+  .services, .services__single {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -575,12 +575,16 @@ h3 {
       .services__section {
         margin-bottom: 3rem;
         text-align: center; } }
-    @media (max-width: 900px) {
-      .services__section:nth-of-type(odd) {
-        flex-direction: column-reverse; } }
-    @media (max-width: 900px) {
-      .services__section:nth-of-type(even) {
-        flex-direction: column; } }
+    .services__section:nth-of-type(odd) {
+      flex-direction: row; }
+      @media (max-width: 900px) {
+        .services__section:nth-of-type(odd) {
+          flex-direction: column-reverse; } }
+    .services__section:nth-of-type(even) {
+      flex-direction: row-reverse; }
+      @media (max-width: 900px) {
+        .services__section:nth-of-type(even) {
+          flex-direction: column; } }
   .services__box {
     box-sizing: border-box;
     width: 50%;
