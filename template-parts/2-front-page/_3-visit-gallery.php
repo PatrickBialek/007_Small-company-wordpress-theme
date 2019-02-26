@@ -2,6 +2,6 @@
 	<div class="visit-gallery__content">
 		<h2 class="heading-secondary margin-bottom-medium "><?php the_field('visit_gallery_title'); ?></h2>
 		<p class="paragraph paragraph--white"><?php the_field('visit_gallery_subtitle'); ?></p>
-		<a class="btn btn--white" href="#">Galeria</a>
+		<a class="btn btn--white" href="<?php echo site_url( '/galeria/' ); ?>">Galeria</a>
 	</div>
 </section>

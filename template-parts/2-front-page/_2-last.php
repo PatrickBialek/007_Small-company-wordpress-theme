@@ -13,7 +13,7 @@
 
 		while ( have_rows('last_works_images') ) : the_row(); 
 		
-			$image = get_sub_field('single-image'); 
+			$image = get_sub_field('single_image'); 
 
 			?>
 

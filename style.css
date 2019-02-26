@@ -180,7 +180,8 @@ h3 {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 2rem;
-  transition: background-color 0.35s, border-color 0.35s, color 0.1s cubic-bezier(0.77, 0, 0.175, 1); }
+  transition: background-color 0.35s, border-color 0.35s, color 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  text-decoration: none; }
   .btn--white:hover {
     background-color: #282828;
     border: solid 1px #282828;
