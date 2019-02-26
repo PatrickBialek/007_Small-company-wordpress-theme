@@ -2,39 +2,37 @@
 	<div class="services__content">
 		<h2 class="heading-secondary margin-bottom-huge">Czym się zajmujemy?</h2>
 
-		<div class="services__section">
-			<div class="services__box">
-				<h2 class="heading-secondary margin-bottom-medium">Renowacja antyków</h2>
-				<p class="paragraph paragraph--dark margin-bottom-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec sodales magna.</p>
-				<p class="paragraph paragraph--dark margin-bottom-small">Donec a magna et lacus pulvinar venenatis in eu nisi. Sed scelerisque lectus sit amet tellus vestibulum vulputate.</p>
-				<p class="paragraph paragraph--dark">Sed in elit vel massa fermentum consectetur. Cras orci elit, vulputate quis turpis non, luctus posuere velit. In hac habitasse platea dictumst.</p>
-			</div>
-			<div class="services__image-box">
-				<img class="services__image" src="<?php echo get_theme_file_uri('/images/services-armchair.jpg') ?>" alt="Armchair">
-			</div>
-		</div>
+		<?php if( have_rows('about_us_section') ): 
 
-		<div class="services__section">
-			<div class="services__image-box">
-				<img class="services__image" src="<?php echo get_theme_file_uri('/images/services-sofa.jpeg') ?>" alt="Sofa">
-			</div>
-			<div class="services__box">
-				<h2 class="heading-secondary margin-bottom-medium">Meble domowe</h2>
-				<p class="paragraph paragraph--dark margin-bottom-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec sodales magna.</p>
-				<p class="paragraph paragraph--dark"> Donec a magna et lacus pulvinar venenatis in eu nisi. Sed scelerisque lectus sit amet tellus vestibulum vulputate. </p>
-			</div>
-		</div>
+			while( have_rows('about_us_section') ): the_row(); 
 
-		<div class="services__section">
-			<div class="services__box">
-				<h2 class="heading-secondary margin-bottom-medium">Usługi dla firm</h2>
-				<p class="paragraph paragraph--dark margin-bottom-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec sodales magna.</p>
-				<p class="paragraph paragraph--dark"> Donec a magna et lacus pulvinar venenatis in eu nisi. Sed scelerisque lectus sit amet tellus vestibulum vulputate. </p>
-			</div>
-			<div class="services__image-box">
-				<img class="services__image" src="<?php echo get_theme_file_uri('/images/services-bar.jpg') ?>" alt="Armchair">
-			</div>
-		</div>
+				if( have_rows('about_us_single_cell') ): 
+
+					while( have_rows('about_us_single_cell') ): the_row();
+
+					$title = get_sub_field('about_us_single_cell_title');
+					$text = get_sub_field('about_us_single_cell_text');
+					$image = get_sub_field('about_us_single_cell_image');
+
+					?>
+
+					<div class="services__section">
+
+						<div class="services__box">
+							<h2 class="heading-secondary margin-bottom-medium"><?php echo $title ?></h2>
+							<div><?php echo $text ?></div>
+						</div>
+
+						<div class="services__image-box">
+							<img class="services__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+
+					</div>
+
+					
+			<?php endwhile; endif; ?>	
+
+		<?php endwhile; endif; ?>	
 
 	</div>
 </section>
