@@ -4,7 +4,7 @@ if( have_rows('opinions_section') ):
 
 	while( have_rows('opinions_section') ): the_row(); ?>
 
-	<section class="opinions">
+	<section class="opinions" id="opinions-container">
 
 		<?php
 
