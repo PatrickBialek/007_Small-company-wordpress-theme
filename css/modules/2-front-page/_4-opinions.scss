@@ -35,6 +35,11 @@
 		line-height: 1.6;
 		font-weight: 300;
 		font-style: italic;
+
+		/*@include atTiny {
+			line-height: 1.3;
+			font-size: 1.35rem;
+		}*/
 	}
 
 	& h4 {

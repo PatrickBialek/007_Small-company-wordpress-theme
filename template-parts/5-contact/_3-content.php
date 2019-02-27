@@ -1,13 +1,28 @@
 <section class="contact">
 	<div class="contact__content">
 		<div class="contact__info-box">
-			<h2 class="heading-secondary">Dane kontaktowe:</h2>
-			<p class="paragraph paragraph--dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget nisi arcu. </p>
+			<?php if( get_field('contact_title') ): ?>
+				<h2 class="heading-secondary"><?php the_field('contact_title'); ?></h2>
+			<?php endif; ?>
+			<?php if( get_field('contact_description') ): ?>
+				<p class="paragraph paragraph--dark"><?php the_field('contact_description'); ?></p>
+			<?php endif; ?>
 			<div class="contact__contact-data">
-				<span>Langenhorner Chaussee 600</span>
-				<span>22419 Hamburg, Germany</span>
-				<span>arredo@select.com</span>
-				<span>+49 (381) 666 33 – 339</span>
+				<?php if( get_field('contact_adres_1') ): ?>
+					<span><?php the_field('contact_adres_1'); ?></span>
+				<?php endif; ?>
+				<?php if( get_field('contact_adres_2') ): ?>
+					<span><?php the_field('contact_adres_2'); ?></span>
+				<?php endif; ?>
+				<?php if( get_field('contact_mail') ): ?>
+					<span><?php the_field('contact_mail'); ?></span>
+				<?php endif; ?>
+				<?php if( get_field('contact_phone_1') ): ?>
+					<span><?php the_field('contact_phone_1'); ?></span>
+				<?php endif; ?>
+				<?php if( get_field('contact_phone_2') ): ?>
+					<span><?php the_field('contact_phone_2'); ?></span>
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="contact__form-box">

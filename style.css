@@ -479,7 +479,11 @@ h3 {
     color: #737373;
     line-height: 1.6;
     font-weight: 300;
-    font-style: italic; }
+    font-style: italic;
+    /*@include atTiny {
+			line-height: 1.3;
+			font-size: 1.35rem;
+		}*/ }
   .opinions h4 {
     margin-top: 1.5rem; }
 
@@ -492,7 +496,6 @@ h3 {
   justify-content: center;
   align-items: center;
   outline: none;
-  display: flex;
   flex-direction: column; }
   .carousel__cell {
     text-align: center;
@@ -513,13 +516,24 @@ h3 {
   height: 300px;
   overflow: hidden;
   position: relative; }
+  @media (max-width: 900px) {
+    .flickity-viewport {
+      height: 400px; } }
+  @media (max-width: 500px) {
+    .flickity-viewport {
+      height: 300px !important; } }
 
 .flickity-button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   transform: translateY(-50%);
-  cursor: pointer; }
+  cursor: pointer;
+  border: none;
+  outline: none; }
+  @media (max-width: 900px) {
+    .flickity-button {
+      display: none; } }
 
 .previous {
   position: absolute;
@@ -534,6 +548,9 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 500px) {
+    .flickity-page-dots {
+      margin-top: 2rem; } }
 
 .dot {
   display: inline-block;
