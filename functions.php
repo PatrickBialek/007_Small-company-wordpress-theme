@@ -1,5 +1,7 @@
 <?php 
 
+define('WPCF7_AUTOP', false );
+
 function theme_assets() {
   wp_deregister_script('jquery');
   wp_deregister_style('contact-form-7');

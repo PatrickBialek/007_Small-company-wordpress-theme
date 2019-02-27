@@ -93,22 +93,32 @@
 		-webkit-appearance: none;
 		cursor: pointer;
 		box-sizing: border-box;
+		margin-bottom: 1rem;
 
 		&::placeholder {
 			font-size: 1.6rem;
 			opacity: 0.7;
 		}
 
+		&--marign-right {
+			margin-right: 1%;
+
+			@include atSmall {
+				margin-right: 0%;
+			}
+		}
+
 		&--50 {
-			width: 49%;
+			width: 49.2%;
 
 			&:first-child {
+
 				@include atTiny {
 					margin-bottom: 1.5rem;
 				}
 			}
 
-			@include atTiny {
+			@include atSmall {
 				width: 100%;
 			}
 		}
@@ -127,6 +137,7 @@
 		outline: none;
 		border: 1px solid #e1e1e1;
 		box-sizing: border-box;
+		margin-bottom: 1rem;
 
 		&::placeholder {
 			font-size: 1.6rem;
@@ -150,4 +161,18 @@
 			cursor: pointer;
 		}
 	}
+}
+
+.wpcf7-not-valid-tip,
+.screen-reader-response {
+	display: none;
+}
+
+.wpcf7-validation-errors {
+	color: red;
+	margin-top: 1rem;
+}
+
+.wpcf7-response-output {
+	margin-top: 1rem;
 }

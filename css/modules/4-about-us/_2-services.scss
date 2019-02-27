@@ -54,6 +54,14 @@
 		padding: 1rem 2rem;
 		flex-direction: column;
 
+		& p {
+			color: $grey;
+			font-weight: 300;
+			line-height: 2.8rem;
+			font-size: 1.7rem;
+			margin-bottom: 1rem;
+		}
+
 		@include atSmall {
 			width: 100%;
 			padding: 2rem;

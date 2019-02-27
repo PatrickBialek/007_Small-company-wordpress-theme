@@ -38,5 +38,13 @@
 				font-size: 1.6rem;
 			}
 		}
+
+		& em {
+			font-style: italic;
+		}
+
+		& strong {
+			font-weight: 700;
+		}
 	}
 }
