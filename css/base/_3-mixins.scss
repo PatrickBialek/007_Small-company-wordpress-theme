@@ -2,14 +2,10 @@
 	@media (max-width: 900px) {
 		@content
 	}
-}
-
-;
+};
 
 @mixin atTiny {
 	@media (max-width: 500px) {
 		@content
 	}
-}
-
-;
+};
